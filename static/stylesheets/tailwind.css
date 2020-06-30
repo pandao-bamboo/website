@@ -1,6 +1,6 @@
-@import "./header.css";
-@import "./theme.css";
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@import "./header.css";
+@import "./theme.css";
