@@ -12,8 +12,6 @@
     "absolute left-0 w-56 mt-2 p-0 m-0 bg-white border shadow-xl invisible";
 
   const toggleProductsDropdown = () => {
-    console.log(showProducts);
-
     showProducts = !showProducts;
 
     dropdownClass = classNames({
@@ -23,8 +21,6 @@
   };
 
   const hideProductsDropdown = () => {
-    console.log(showProducts);
-
     showProducts = false;
 
     dropdownClass = classNames({
