@@ -20,6 +20,13 @@
   });
 </script>
 
+<svelte:head>
+  <title>
+    Digital Asset Insurance and Decentralized Management of Insurance Liquidity
+    Pools | PanDAO
+  </title>
+</svelte:head>
+
 <section
   id="header"
   class="header m-0 flex flex-col w-screen justify-center bg-gray-800 h-screen

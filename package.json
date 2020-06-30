@@ -4,7 +4,7 @@
   "version": "0.0.1",
   "license": "GPLv3",
   "scripts": {
-    "dev": "sapper dev",
+    "dev": "yarn build:tailwind && sapper dev",
     "build": "yarn build:tailwind && sapper build --legacy",
     "watch:tailwind": "postcss static/stylesheets/tailwind.css -o static/stylesheets/index.css -w",
     "build:tailwind": "NODE_ENV=production postcss static/stylesheets/tailwind.css -o static/stylesheets/index.css",
@@ -15,6 +15,7 @@
     "test": "run-p --race dev cy:run"
   },
   "dependencies": {
+    "classnames": "^2.2.6",
     "compression": "^1.7.1",
     "polka": "next",
     "sirv": "^0.4.0"

@@ -1,3 +1,163 @@
+.navigation {
+  background: rgba(45, 55, 72, var(--bg-opacity));
+  padding: 15px 0px;
+}
+
+.navigation li {
+  cursor: pointer;
+}
+
+.star {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  border-radius: 5px;
+}
+
+@keyframes twinkle {
+  0% {
+    transform: scale(1, 1);
+    background: rgba(255, 255, 255, 0);
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+  }
+
+  40% {
+    transform: scale(0.8, 0.8);
+    background: rgba(255, 255, 255, 1);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+
+  80% {
+    background: rgba(255, 255, 255, 0);
+    transform: scale(1, 1);
+  }
+
+  100% {
+    background: rgba(255, 255, 255, 0);
+    transform: scale(1, 1);
+  }
+}
+
+.moon {
+  position: absolute;
+  left: 80%;
+  top: 30%;
+  margin: -100px;
+  width: 200px;
+  height: 200px;
+  background: #c7cbd0;
+  border-radius: 50%;
+  box-shadow: inset -25px 0px 0 0px #9098a1;
+  transition: transform 0.2s ease-in-out;
+}
+
+.moon li {
+  position: absolute;
+  list-style: none;
+  background: #737277;
+  border-radius: 50%;
+}
+
+.moon li:nth-child(1) {
+  left: 25px;
+  top: 60px;
+  width: 50px;
+  height: 50px;
+  box-shadow: inset 6px -2px 0 0px #414043;
+}
+
+.moon li:nth-child(2) {
+  left: 150px;
+  top: 50px;
+  width: 25px;
+  height: 25px;
+  box-shadow: inset 3px -1px 0 0px #414043;
+}
+
+.moon li:nth-child(3) {
+  left: 100px;
+  top: 150px;
+  width: 25px;
+  height: 25px;
+  box-shadow: inset 3px -1px 0 0px #414043;
+}
+
+.moon li:nth-child(4) {
+  left: 50px;
+  top: 150px;
+  width: 12.5px;
+  height: 12.5px;
+  box-shadow: inset 2.4px -0.8px 0 0px #414043;
+}
+
+.moon li:nth-child(5) {
+  left: 87.5px;
+  top: 16.66666667px;
+  width: 12.5px;
+  height: 12.5px;
+  box-shadow: inset 2.4px -0.8px 0 0px #414043;
+}
+
+.moon li:nth-child(6) {
+  left: 114.28571429px;
+  top: 80px;
+  width: 12.5px;
+  height: 12.5px;
+  box-shadow: inset 2.4px -0.8px 0 0px #414043;
+}
+
+.moon li:nth-child(7) {
+  left: 181.81818182px;
+  top: 100px;
+  width: 12.5px;
+  height: 12.5px;
+  box-shadow: inset 2.4px -0.8px 0 0px #414043;
+}
+
+.moon:hover {
+  transform: scale(1.2);
+}
+
+.brand-green {
+  color: #8bc852;
+}
+
+.brand-green-dark {
+  color: #4b715d;
+}
+
+.brand-white {
+  color: #fafbfc;
+}
+
+body {
+  padding: 0rem;
+  overflow: hidden;
+}
+
+.button-brand-grey {
+  color: #fafbfc;
+  background-color: #545f63;
+  padding: 10px 15px;
+  border: 0px;
+}
+
+.button-brand-grey:hover {
+  text-decoration: none;
+}
+
+.button-brand-grey:active {
+  background-color: #545f63 !important;
+  opacity: 0.8;
+  color: #8bc852;
+}
+
+.button-brand-grey:visited {
+  color: #fafbfc;
+}
+
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 
 /* Document
@@ -84,11 +244,6 @@ a {
  * 1. Correct the inheritance and scaling of font size in all browsers.
  * 2. Correct the odd `em` font sizing in all browsers.
  */
-
-code {
-  font-family: monospace, monospace; /* 1 */
-  font-size: 1em; /* 2 */
-}
 
 /**
  * Add the correct font size in all browsers.
@@ -245,8 +400,8 @@ button:-moz-focusring,
  * Removes the default spacing and border for appropriate elements.
  */
 
+
 h1,
-h2,
 p,
 pre {
   margin: 0;
@@ -267,6 +422,7 @@ button:focus {
   outline: 1px dotted;
   outline: 5px auto -webkit-focus-ring-color;
 }
+
 
 ul {
   list-style: none;
@@ -347,8 +503,7 @@ button {
   cursor: pointer;
 }
 
-h1,
-h2 {
+h1 {
   font-size: inherit;
   font-weight: inherit;
 }
@@ -384,8 +539,7 @@ button {
  * 'mono' font family.
  */
 
-pre,
-code {
+pre {
   font-family: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
@@ -415,10 +569,30 @@ img {
   height: auto;
 }
 
+.bg-white {
+  --bg-opacity: 1;
+  background-color: #fff;
+  background-color: rgba(255, 255, 255, var(--bg-opacity));
+}
+
 .bg-gray-800 {
   --bg-opacity: 1;
   background-color: #2d3748;
   background-color: rgba(45, 55, 72, var(--bg-opacity));
+}
+
+.hover\:bg-gray-800:hover {
+  --bg-opacity: 1;
+  background-color: #2d3748;
+  background-color: rgba(45, 55, 72, var(--bg-opacity));
+}
+
+.border {
+  border-width: 1px;
+}
+
+.cursor-pointer {
+  cursor: pointer;
 }
 
 .block {
@@ -453,6 +627,10 @@ img {
   font-weight: 700;
 }
 
+.h-12 {
+  height: 3rem;
+}
+
 .h-screen {
   height: 100vh;
 }
@@ -483,6 +661,10 @@ img {
   margin-right: auto;
 }
 
+.mt-2 {
+  margin-top: 0.5rem;
+}
+
 .mr-3 {
   margin-right: 0.75rem;
 }
@@ -495,9 +677,47 @@ img {
   margin-right: 1.25rem;
 }
 
+.focus\:outline-none:focus {
+  outline: 0;
+}
+
+.p-0 {
+  padding: 0;
+}
+
+.p-12 {
+  padding: 3rem;
+}
+
+.py-2 {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.px-4 {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
 .px-8 {
   padding-left: 2rem;
   padding-right: 2rem;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.relative {
+  position: relative;
+}
+
+.left-0 {
+  left: 0;
+}
+
+.shadow-xl {
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
 }
 
 .text-white {
@@ -512,19 +732,60 @@ img {
   color: rgba(247, 250, 252, var(--text-opacity));
 }
 
+.text-gray-900 {
+  --text-opacity: 1;
+  color: #1a202c;
+  color: rgba(26, 32, 44, var(--text-opacity));
+}
+
+.hover\:text-white:hover {
+  --text-opacity: 1;
+  color: #fff;
+  color: rgba(255, 255, 255, var(--text-opacity));
+}
+
+.visible {
+  visibility: visible;
+}
+
+.invisible {
+  visibility: hidden;
+}
+
 .w-8 {
   width: 2rem;
+}
+
+.w-12 {
+  width: 3rem;
 }
 
 .w-16 {
   width: 4rem;
 }
 
+.w-56 {
+  width: 14rem;
+}
+
+.w-64 {
+  width: 16rem;
+}
+
 .w-screen {
   width: 100vw;
 }
 
+.transition-colors {
+  transition-property: background-color, border-color, color, fill, stroke;
+}
+
+.duration-200 {
+  transition-duration: 200ms;
+}
+
 @media (min-width: 640px) {
+
   .sm\:text-lg {
     font-size: 1.125rem;
   }
@@ -535,6 +796,7 @@ img {
 }
 
 @media (min-width: 768px) {
+
   .md\:text-xl {
     font-size: 1.25rem;
   }
@@ -555,6 +817,7 @@ img {
 }
 
 @media (min-width: 1024px) {
+
   .lg\:text-3xl {
     font-size: 1.875rem;
   }
