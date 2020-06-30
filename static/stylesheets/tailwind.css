@@ -2,5 +2,195 @@
 @tailwind components;
 @tailwind utilities;
 
-@import "./header.css";
-@import "./theme.css";
+$brand-grey: #545f63;
+$brand-grey-dark: #2f373b;
+$brand-green: #8bc852;
+$brand-green-dark: #4b715d;
+$brand-white: #fafbfc;
+
+.brand-grey {
+  color: $brand-grey;
+}
+.brand-grey-dark {
+  color: $brand-grey-dark;
+}
+.brand-green {
+  color: $brand-green;
+}
+.brand-green-dark {
+  color: $brand-green-dark;
+}
+.brand-white {
+  color: $brand-white;
+}
+
+body {
+  padding: 0rem;
+  overflow: hidden;
+}
+
+.button-brand-green-dark {
+  color: $brand-white;
+  background: $brand-green-dark;
+  padding: 10px 15px;
+  border: 0px;
+
+  &:hover {
+    text-decoration: none;
+  }
+
+  &:active,
+  &:focus,
+  &:hover {
+    background-color: $brand-green-dark !important;
+    opacity: 0.8;
+    color: $brand-white;
+  }
+
+  &:visited {
+    color: $brand-white;
+  }
+}
+
+.button-brand-grey {
+  color: $brand-white;
+  background-color: $brand-grey;
+  padding: 10px 15px;
+  border: 0px;
+
+  &:hover {
+    text-decoration: none;
+  }
+
+  &:active {
+    background-color: $brand-grey !important;
+    opacity: 0.8;
+    color: $brand-green;
+  }
+
+  &:visited {
+    color: $brand-white;
+  }
+}
+
+.navigation {
+  background: rgba(45, 55, 72, var(--bg-opacity));
+  padding: 15px 0px;
+}
+
+.navigation li {
+  cursor: pointer;
+}
+
+.star {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  border-radius: 5px;
+}
+
+@keyframes twinkle {
+  0% {
+    transform: scale(1, 1);
+    background: rgba(255, 255, 255, 0);
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+  }
+
+  40% {
+    transform: scale(0.8, 0.8);
+    background: rgba(255, 255, 255, 1);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+
+  80% {
+    background: rgba(255, 255, 255, 0);
+    transform: scale(1, 1);
+  }
+
+  100% {
+    background: rgba(255, 255, 255, 0);
+    transform: scale(1, 1);
+  }
+}
+
+.moon {
+  position: absolute;
+  left: 80%;
+  top: 30%;
+  margin: -100px;
+  width: 200px;
+  height: 200px;
+  background: #c7cbd0;
+  border-radius: 50%;
+  box-shadow: inset -25px 0px 0 0px #9098a1;
+  transition: transform 0.2s ease-in-out;
+}
+
+.moon li {
+  position: absolute;
+  list-style: none;
+  background: #737277;
+  border-radius: 50%;
+}
+
+.moon li:nth-child(1) {
+  left: 25px;
+  top: 60px;
+  width: 50px;
+  height: 50px;
+  box-shadow: inset 6px -2px 0 0px #414043;
+}
+
+.moon li:nth-child(2) {
+  left: 150px;
+  top: 50px;
+  width: 25px;
+  height: 25px;
+  box-shadow: inset 3px -1px 0 0px #414043;
+}
+
+.moon li:nth-child(3) {
+  left: 100px;
+  top: 150px;
+  width: 25px;
+  height: 25px;
+  box-shadow: inset 3px -1px 0 0px #414043;
+}
+
+.moon li:nth-child(4) {
+  left: 50px;
+  top: 150px;
+  width: 12.5px;
+  height: 12.5px;
+  box-shadow: inset 2.4px -0.8px 0 0px #414043;
+}
+
+.moon li:nth-child(5) {
+  left: 87.5px;
+  top: 16.66666667px;
+  width: 12.5px;
+  height: 12.5px;
+  box-shadow: inset 2.4px -0.8px 0 0px #414043;
+}
+
+.moon li:nth-child(6) {
+  left: 114.28571429px;
+  top: 80px;
+  width: 12.5px;
+  height: 12.5px;
+  box-shadow: inset 2.4px -0.8px 0 0px #414043;
+}
+
+.moon li:nth-child(7) {
+  left: 181.81818182px;
+  top: 100px;
+  width: 12.5px;
+  height: 12.5px;
+  box-shadow: inset 2.4px -0.8px 0 0px #414043;
+}
+
+.moon:hover {
+  transform: scale(1.2);
+}
