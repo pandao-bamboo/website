@@ -1,0 +1,11 @@
+{
+  "build": {
+    "image": "node-10",
+    "command": "yarn install && yarn build && echo $production",
+    "publicDir": "__sapper__/export/",
+    "baseDir": "__sapper__/export/",
+    "environment": {
+      "production": "Build finished!"
+    }
+  }
+}
