@@ -1,9 +1,0 @@
-{
-  "build": {
-    "image": "node-10",
-    "command": "yarn install && yarn build && echo $production",
-    "environment": {
-      "production": "Build finished!"
-    }
-  }
-}
