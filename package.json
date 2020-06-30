@@ -8,7 +8,7 @@
     "build": "yarn build:tailwind && sapper build --legacy",
     "watch:tailwind": "postcss static/stylesheets/tailwind.css -o static/stylesheets/index.css -w",
     "build:tailwind": "NODE_ENV=production postcss static/stylesheets/tailwind.css -o static/stylesheets/index.css",
-    "export": "sapper export --legacy",
+    "export": "yarn build:tailwind && sapper export --legacy",
     "start": "node __sapper__/build",
     "cy:run": "cypress run",
     "cy:open": "cypress open",
