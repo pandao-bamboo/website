@@ -4,9 +4,7 @@
 
   // images
   let pandaoLogo = "./images/pandao_logo.png";
-  let githubLogo = "./images/github_logo.svg";
-  let twitterLogo = "./images/twitter_logo.svg";
-  let discordLogo = "./images/discord_logo.svg";
+
   let showProducts = false;
   let dropdownClass =
     "absolute left-0 w-56 mt-2 p-0 m-0 bg-white border shadow-xl invisible";
@@ -15,8 +13,8 @@
     showProducts = !showProducts;
 
     dropdownClass = classNames({
-      "absolute left-0 w-64 mt-2 p-0 m-0 bg-white border shadow-xl invisible": !showProducts,
-      "absolute left-0 w-64 mt-2 p-0 m-0 bg-white border shadow-xl visible": showProducts
+      "z-20 absolute right-0 w-64 mt-2 p-0 m-0 bg-white border shadow-xl invisible": !showProducts,
+      "z-20 absolute right-0 w-64 mt-2 p-0 m-0 bg-white border shadow-xl visible": showProducts
     });
   };
 
@@ -24,8 +22,8 @@
     showProducts = false;
 
     dropdownClass = classNames({
-      "absolute left-0 w-64 mt-2 p-0 m-0 bg-white border shadow-xl invisible": !showProducts,
-      "absolute left-0 w-64 mt-2 p-0 m-0 bg-white border shadow-xl visible": showProducts
+      "z-20 absolute right-0 w-64 mt-2 p-0 m-0 bg-white border shadow-xl invisible": !showProducts,
+      "z-20 absolute right-0 w-64 mt-2 p-0 m-0 bg-white border shadow-xl visible": showProducts
     });
   };
 </script>
@@ -48,11 +46,11 @@
       <div class="flex justify-center p-12">
         <!-- Dropdown -->
         <div
-          class="relative"
+          class="relative dropdown"
           on:click={toggleProductsDropdown}
           use:clickOutside
           on:click_outside={showProducts ? hideProductsDropdown : null}>
-          <button class="block h-12 w-12 focus:outline-none">Products</button>
+          <button class="block focus:outline-none">Products</button>
           <!-- Dropdown Body -->
           <div class={dropdownClass}>
             <a
@@ -73,40 +71,8 @@
         </div>
         <!-- // Dropdown -->
       </div>
-
-      <span class="mr-5">
-        <a href=".">Documentation</a>
-      </span>
-
       <span>
         <a href=".">DAO</a>
-      </span>
-    </li>
-
-    <li class="flex justify-between items-center">
-      <span class="mr-5">
-        <a
-          href="https://github.com/pandao-bamboo"
-          target="_blank"
-          rel="noopener noreferrer">
-          <img class="w-8" src={githubLogo} alt="Github" />
-        </a>
-      </span>
-      <span class="mr-3">
-        <a
-          href="https://twitter.com/PandaoBamboo"
-          target="_blank"
-          rel="noopener noreferrer">
-          <img class="w-8" src={twitterLogo} alt="Twitter" />
-        </a>
-      </span>
-      <span>
-        <a
-          href="https://discord.gg/Wg92Ndk"
-          target="_blank"
-          rel="noopener noreferrer">
-          <img class="w-8" src={discordLogo} alt="Community" />
-        </a>
       </span>
     </li>
   </ul>

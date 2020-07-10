@@ -1,8 +1,26 @@
 $brand-grey: #545f63;
 $brand-grey-dark: #2f373b;
+$brand-grey-light: #9098a1;
 $brand-green: #8bc852;
 $brand-green-dark: #4b715d;
 $brand-white: #fafbfc;
+
+.dropdown {
+  a {
+    font-size: 18px;
+  }
+}
+.logo-icons {
+  width: 4rem;
+}
+
+.social-icons {
+  width: 2.5rem;
+}
+
+.ethereum-logo {
+  width: 11rem;
+}
 
 .brand-grey {
   color: $brand-grey;
@@ -22,7 +40,8 @@ $brand-white: #fafbfc;
 
 body {
   padding: 0rem;
-  overflow: hidden;
+  overflow-x: hidden;
+  font-family: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
 .button-brand-green-dark {
@@ -48,11 +67,14 @@ body {
   }
 }
 
+.bg-brand-grey {
+  background-color: $brand-grey;
+}
+
 .button-brand-grey {
   color: $brand-white;
-  background-color: $brand-grey;
   padding: 10px 15px;
-  border: 0px;
+  border: 3px solid $brand-green;
 
   &:hover {
     text-decoration: none;

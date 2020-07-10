@@ -44,11 +44,11 @@
   </div>
 
   <h1
-    class="text-base sm:text-xl md:text-2xl lg:text-4xl my-auto mx-auto md:mx-48
+    class="text-base sm:text-xl md:text-2xl lg:text-3xl my-auto mx-auto md:mx-48
     ">
     Sleep better at night knowing your assets are covered.
     <br />
-    <span class="brand-green-dark text-base sm:text-lg md:text-xl lg:text-3xl">
+    <span class="brand-green-dark text-base sm:text-lg md:text-xl lg:text-2xl">
       Decentralized Management of Insurance Liquidity Pools
     </span>
     <br />
