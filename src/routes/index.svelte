@@ -1,5 +1,6 @@
 <script>
   import { onMount } from "svelte";
+  import LandingPage from "../components/LandingPage.svelte";
 
   onMount(() => {
     for (let i = 0; i < 100; i++) {
@@ -58,3 +59,5 @@
   </h1>
 
 </section>
+
+<LandingPage />

@@ -261,6 +261,11 @@ a {
  * 2. Correct the odd `em` font sizing in all browsers.
  */
 
+code {
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}
+
 /**
  * Add the correct font size in all browsers.
  */
@@ -555,7 +560,8 @@ button {
  * 'mono' font family.
  */
 
-pre {
+pre,
+code {
   font-family: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
@@ -732,12 +738,16 @@ img {
   margin-right: 1.25rem;
 }
 
-.mb-5 {
-  margin-bottom: 1.25rem;
+.mb-20 {
+  margin-bottom: 5rem;
 }
 
 .max-w-screen-lg {
   max-width: 1024px;
+}
+
+.max-w-screen-xl {
+  max-width: 1280px;
 }
 
 .focus\:outline-none:focus {

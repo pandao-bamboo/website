@@ -4,49 +4,9 @@
   let discordLogo = "./images/discord_logo.svg";
   let aragonLogo = "./images/aragon_logo.png";
   let ethereumLogo = "./images/ethereum_logo.png";
-
-  function toggleFooterSection(e) {
-    const list = e.target.parentElement.parentElement.querySelector("article");
-    if (list.classList.contains("h-0")) {
-      list.classList.remove("h-0");
-    } else {
-      list.classList.add("h-0");
-    }
-  }
 </script>
 
-<section class="bg-gray-700">
-  <div class="max-w-screen-lg mx-auto md:px-4 md:pt-10 md:pb-5">
-    <div class="flex items-center flex-col">
-      <h1
-        class="brand-green font-mono sm:text-lg md:text-xl lg:text-2xl my-auto
-        mx-auto md:mx-48">
-        PanDAO is a Insurance Co-op
-      </h1>
-
-      <p class="text-white text-lg mb-5 text-center">
-        PanDAO is a decentralized autonomous organization summoned to manage
-        pools of liquidity in order to provide every day users insurance for
-        their digital assets.
-      </p>
-    </div>
-
-    <div
-      class="border-none px-4 flex flex-row my-5 justify-between items-center
-      w-full">
-      <div>
-        <h1 class="text-white">Trustless</h1>
-      </div>
-
-      <div>
-        <h1 class="text-white">Member Owned</h1>
-      </div>
-
-      <div>
-        <h1 class="text-white">Opensource Organization</h1>
-      </div>
-    </div>
-  </div>
+<div class="bg-gray-700">
   <div class="max-w-screen-lg mx-auto border-none px-4">
     <section
       class="flex flex-row justify-between border-t text-white font-light
@@ -83,4 +43,4 @@
       </div>
     </section>
   </div>
-</section>
+</div>
