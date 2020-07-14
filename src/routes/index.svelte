@@ -21,6 +21,14 @@
       header.innerHTML += star;
     }
   });
+
+  function openHandbook() {
+    console.log("open");
+    window.open(
+      "https://pandao-handbook.on.fleek.co",
+      "_blank" // <- This is what makes it open in a new window.
+    );
+  }
 </script>
 
 <svelte:head>
@@ -55,13 +63,12 @@
       Decentralized Management of Insurance Liquidity Pools
     </span>
     <br />
-    <a
-      target="_blank"
-      href="https://pandao-handbook.on.fleek.co"
-      class="flex flex-row justify-between button-brand-grey mt-5 font-semibold">
+    <button
+      on:click={openHandbook}
+      class="flex flex-row justify-between button-brand-grey mt-5 font-semibold ">
       <img src={bamboo} alt="Join the BAMBOO" class="w-8 bamboo-icon" />
       Learn about the DAO
-    </a>
+    </button>
   </h1>
 </section>
 
