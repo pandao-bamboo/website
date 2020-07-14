@@ -55,12 +55,13 @@
       Decentralized Management of Insurance Liquidity Pools
     </span>
     <br />
-    <button
-      href="#about-dao"
+    <a
+      target="_blank"
+      href="https://pandao-handbook.on.fleek.co"
       class="flex flex-row justify-between button-brand-grey mt-5 font-semibold">
       <img src={bamboo} alt="Join the BAMBOO" class="w-8 bamboo-icon" />
       Learn about the DAO
-    </button>
+    </a>
   </h1>
 </section>
 
