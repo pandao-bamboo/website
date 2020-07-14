@@ -1,5 +1,5 @@
 {
-  "name": "pandao-website",
+  "name": "PanDAO",
   "description": "PanDAO Website",
   "version": "0.0.1",
   "license": "GPLv3",
@@ -46,5 +46,8 @@
     "svelte": "^3.0.0",
     "svelte-preprocess": "^3.9.10",
     "tailwindcss": "^1.4.6"
-  }
+  },
+  "main": "index.js",
+  "repository": "git@github.com:pandao-bamboo/website.git",
+  "author": "PanDAO <support@pandao.org>"
 }
