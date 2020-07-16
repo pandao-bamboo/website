@@ -1,8 +1,10 @@
 <script>
-  import { onMount } from "svelte";
+  import { onMount, onDestroy } from "svelte";
   import LandingPage from "../components/LandingPage.svelte";
+  import ActionButton from "../components/ActionButton.svelte";
 
   let bamboo = "./images/bamboo.svg";
+  let buttonListener;
 
   onMount(() => {
     for (let i = 0; i < 100; i++) {
@@ -16,19 +18,22 @@
         "px; left: " +
         Math.random() * (window.innerWidth - 100) +
         'px;"></div>';
-
       let header = document.getElementById("header");
       header.innerHTML += star;
+
+      const button = document.getElementById("action-button");
+
+      if (!buttonListener) {
+        buttonListener = button.addEventListener("click", () => {
+          window.open("https://pandao-handbook.on.fleek.co", "_blank");
+        });
+      }
     }
   });
 
-  function openHandbook() {
-    console.log("open");
-    window.open(
-      "https://pandao-handbook.on.fleek.co",
-      "_blank" // <- This is what makes it open in a new window.
-    );
-  }
+  onDestroy(() => {
+    buttonListener && buttonListener.removeEventListener();
+  });
 </script>
 
 <svelte:head>
@@ -63,12 +68,12 @@
       Decentralized Management of Insurance Liquidity Pools
     </span>
     <br />
-    <button
-      on:click={openHandbook}
-      class="flex flex-row justify-between button-brand-grey mt-5 font-semibold ">
-      <img src={bamboo} alt="Join the BAMBOO" class="w-8 bamboo-icon" />
-      Learn about the DAO
-    </button>
+
+    <ActionButton
+      icon={bamboo}
+      message="Learn about the DAO"
+      url="https://pandao-handbook.on.fleek.co"
+      newWindow={true} />
   </h1>
 </section>
 

@@ -6,23 +6,12 @@
   let ethereumLogo = "./images/ethereum_logo.png";
 </script>
 
-<div class="bg-gray-700">
+<footer class="bg-gray-700">
   <div class="max-w-screen-lg mx-auto border-none px-4">
     <section
       class="flex flex-row justify-between border-t text-white font-light
       text-sm pt-4 pb-6 pt-5 pb-6 w-full">
-      <div class="flex justify-between items-center items-center">
-
-        <span class="mt-2">
-          <img
-            class="ethereum-logo mr-2"
-            src={ethereumLogo}
-            alt="ethereum logo" />
-        </span>
-        <span>
-          <img class="mr-5 logo-icons" src={aragonLogo} alt="aragon link" />
-        </span>
-      </div>
+      <div class="flex justify-between items-center items-center" />
 
       <div class="flex justify-between items-center">
         <span class="mr-2">
@@ -43,4 +32,4 @@
       </div>
     </section>
   </div>
-</div>
+</footer>
